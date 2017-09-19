@@ -1,0 +1,127 @@
+<html>
+<head>
+<meta charset='utf-8'>
+<title>MK Test</title>
+<link href="css/default.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script language="javascript" src="js/mascara.js"></script>
+	<script language="javascript" src="js/functions.js"></script>
+</head>
+<body>
+
+	<!-- BUSCA -->
+	<center>
+	<div id="listar">
+	<div class="row">
+		<div class="form-group">
+		<div class="col-xs-8 col-sm-8 col-md-3 col-lg-3">
+			<input type="text" class="form-control" id="busca" placeholder="Cliente">
+		</div>
+		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+			<button id='buscar' onclick='populaTabelaItens();' class="btn btn-light" style="float: left;">Listar</button>
+		</div>
+		</div>
+	</div>
+	</div>
+	</center>
+	
+	<!-- CADASTRO -->
+	
+	<div id="cadastro">
+    <center><h3>Cadastrar Cliente</h3></center>
+	<div class="row">
+		<div class="col-md-4 col-lg-4"></div>
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="form-group">
+				<label for="cpf">CPF:</label>
+				<input type="text" class="form-control" maxlength="14" onKeyDown="Mascara(this, Cpf)" id="cpf">
+			</div>
+			<div class="form-group">
+				<label for="nome">Nome:</label>
+				<input type="text" class="form-control" id="nome">
+			</div>
+			<div class="form-group">
+				<label for="telefone">Telefone:</label>
+				<input type="text" class="form-control" onKeyDown="Mascara(this, Telefone);" maxlength="14" id="telefone">
+			</div>
+			<div class="form-group">
+				<label for="celular">Celular:</label>
+				<input type="text" class="form-control" onKeyDown="Mascara(this, mtel);" maxlength="15" id="celular">
+			</div>
+			<div class="form-group">
+				<label for="telComercial">Tel. Comercial:</label>
+				<input type="text" class="form-control" onKeyDown="Mascara(this, Telefone);" maxlength="14" id="telComercial">
+			</div>
+			<button id="enviar" style="text-transform:uppercase;" class="btn btn-default">Enviar</button>
+		</div>
+		<div class="col-md-4 col-lg-4"></div>
+	</div>
+	</div>
+	
+	<!-- EDIÇÃO -->
+	
+	<div id="edicao">
+    <center><h3>Editar Cliente</h3></center>
+	<div class="row">
+		<div class="col-md-4 col-lg-4"></div>
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="form-group">
+				<label for="cpf">CPF:</label>
+				<input type="text" class="form-control" maxlength="14" onKeyDown="Mascara(this, Cpf)" id="cpf1">
+			</div>
+			<div class="form-group">
+				<label for="nome">Nome:</label>
+				<input type="text" class="form-control" name="nome" id="nome1">
+			</div>
+			<div class="form-group">
+				<label for="telefone">Telefone:</label>
+				<input type="text" class="form-control" onKeyDown="Mascara(this, Telefone);" maxlength="14" id="telefone1">
+			</div>
+			<div class="form-group">
+				<label for="celular">Celular:</label>
+				<input type="text" class="form-control" onKeyDown="Mascara(this, mtel);" maxlength="15" id="celular1">
+			</div>
+			<div class="form-group">
+				<label for="telComercial">Tel. Comercial:</label>
+				<input type="text" class="form-control" onKeyDown="Mascara(this, Telefone);" maxlength="14" id="telComercial1">
+			</div>
+			<button id="salvar" style="text-transform:uppercase;" class="btn btn-default">Salvar</button>
+			<button id="excluir" style="text-transform:uppercase;" class="btn btn-default">Excluir</button>
+		</div>
+		<div class="col-md-4 col-lg-4"></div>
+	</div>
+	</div>
+	
+	<!-- BUSCA -->
+	
+	<div class="busca">
+    <center><h3>Lista de Clientes</h3></center>
+	<div class="row">
+		<div class="col-md-1 col-lg-1"></div>
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+		<div class="table-responsive">
+			<table id='tabela' class="table table-striped">
+			<thead>
+				<tr>
+					<th style="width: 15%;"><strong>CPF</strong></th>
+					<th style="width: 35%;"><strong>Nome</strong></th>
+					<th style="width: 15%;"><strong>Telefone</strong></th>
+					<th style="width: 15%;"><strong>Celular</strong></th>
+					<th style="width: 15%;"><strong>Tel. Comercial</strong></th>
+					<th style="width: 5%;"><strong></strong></th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+			</table>
+			<button id="voltar" style="text-transform:uppercase;" class="btn btn-default">Voltar</button>
+		</div>
+		</div>
+		<div class="col-md-1 col-lg-1"></div>
+	</div>
+	</div>
+</body>
+</html>
